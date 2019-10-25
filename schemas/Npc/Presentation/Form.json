@@ -1,0 +1,89 @@
+{
+    "ajax": {
+        "get": {
+            "GET": "\/trident\/resource\/Npc"
+        },
+        "create": {
+            "POST": "\/trident\/resource\/Npc"
+        },
+        "update": {
+            "POST": "\/trident\/resource\/Npc"
+        },
+        "delete": {
+            "DELETE": "\/trident\/resource\/Npc"
+        }
+    },
+    "presentation": {
+        "type": "form",
+        "schema": [
+            {
+                "column_name": "name",
+                "column_type": "string",
+                "type": "fillable",
+                "validation_rules": {
+                    "required": true,
+                    "type": "string",
+                    "trigger": "blur"
+                },
+                "attributes": {
+                    "type": {
+                        "string": true
+                    },
+                    "default_value": "''",
+                    "element_type": false
+                }
+            },
+            {
+                "column_name": "description",
+                "column_type": "string",
+                "type": "fillable",
+                "validation_rules": {
+                    "required": false,
+                    "type": "string",
+                    "trigger": "blur"
+                },
+                "attributes": {
+                    "type": {
+                        "string": true
+                    },
+                    "default_value": "''",
+                    "element_type": false
+                }
+            },
+            {
+                "column_name": "public_notes",
+                "column_type": "string",
+                "type": "fillable",
+                "validation_rules": {
+                    "required": false,
+                    "type": "string",
+                    "trigger": "blur"
+                },
+                "attributes": {
+                    "type": {
+                        "string": true
+                    },
+                    "default_value": "''",
+                    "element_type": false
+                }
+            },
+            {
+                "column_name": "private_notes",
+                "column_type": "string",
+                "type": "fillable",
+                "validation_rules": {
+                    "required": false,
+                    "type": "string",
+                    "trigger": "blur"
+                },
+                "attributes": {
+                    "type": {
+                        "string": true
+                    },
+                    "default_value": "''",
+                    "element_type": false
+                }
+            }
+        ]
+    }
+}

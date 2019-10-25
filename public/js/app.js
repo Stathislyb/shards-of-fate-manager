@@ -49518,9 +49518,9 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\trident-vista-project\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\xampp\htdocs\trident-vista-project\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\trident-vista-project\resources_backend\sass\app.scss */"./resources_backend/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\shards_of_fate\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! C:\xampp\htdocs\shards_of_fate\resources\sass\app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\shards_of_fate\resources_backend\sass\app.scss */"./resources_backend/sass/app.scss");
 
 
 /***/ })

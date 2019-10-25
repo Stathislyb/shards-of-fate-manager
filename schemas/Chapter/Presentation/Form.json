@@ -1,0 +1,55 @@
+{
+    "ajax": {
+        "get": {
+            "GET": "\/trident\/resource\/Chapter"
+        },
+        "create": {
+            "POST": "\/trident\/resource\/Chapter"
+        },
+        "update": {
+            "POST": "\/trident\/resource\/Chapter"
+        },
+        "delete": {
+            "DELETE": "\/trident\/resource\/Chapter"
+        }
+    },
+    "presentation": {
+        "type": "form",
+        "schema": [
+            {
+                "column_name": "name",
+                "column_type": "string",
+                "type": "fillable",
+                "validation_rules": {
+                    "required": true,
+                    "type": "string",
+                    "trigger": "blur"
+                },
+                "attributes": {
+                    "type": {
+                        "string": true
+                    },
+                    "default_value": "''",
+                    "element_type": false
+                }
+            },
+            {
+                "column_name": "description",
+                "column_type": "string",
+                "type": "fillable",
+                "validation_rules": {
+                    "required": true,
+                    "type": "string",
+                    "trigger": "blur"
+                },
+                "attributes": {
+                    "type": {
+                        "string": true
+                    },
+                    "default_value": "''",
+                    "element_type": false
+                }
+            }
+        ]
+    }
+}

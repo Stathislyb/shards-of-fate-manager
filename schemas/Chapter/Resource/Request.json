@@ -1,0 +1,29 @@
+{
+    "type": "json",
+    "data": {
+        "id": {
+            "type": "T::nullable(T::integer())",
+            "validation": {
+                "rule": "integer",
+                "message": "T::string()"
+            },
+            "fillable": false
+        },
+        "name": {
+            "type": "T::nullable(T::string())",
+            "validation": {
+                "rule": "string",
+                "message": "T::string()"
+            },
+            "fillable": true
+        },
+        "description": {
+            "type": "T::nullable(T::string())",
+            "validation": {
+                "rule": "string",
+                "message": "T::string()"
+            },
+            "fillable": true
+        }
+    }
+}

@@ -11,7 +11,7 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.setPublicPath(('../shards-of-fate/'));
+mix.setPublicPath(('../shards_of_fate/'));
 
 mix.js('resources/js/app.js', 'public/js')
    .sass('resources/sass/app.scss', 'public/css');

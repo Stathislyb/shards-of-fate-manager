@@ -1,0 +1,26 @@
+{
+    "type": "json",
+    "data": {
+        "id": {
+            "resource": true
+        },
+        "token": {
+            "resource": true
+        },
+        "name": {
+            "resource": true
+        },
+        "reputation": {
+            "resource": true
+        },
+        "notes": {
+            "resource": true
+        },
+        "created_at": {
+            "resource": true
+        },
+        "updated_at": {
+            "resource": true
+        }
+    }
+}

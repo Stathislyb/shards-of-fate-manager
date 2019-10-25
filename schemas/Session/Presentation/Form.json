@@ -1,0 +1,106 @@
+{
+    "ajax": {
+        "get": {
+            "GET": "\/trident\/resource\/Session"
+        },
+        "create": {
+            "POST": "\/trident\/resource\/Session"
+        },
+        "update": {
+            "POST": "\/trident\/resource\/Session"
+        },
+        "delete": {
+            "DELETE": "\/trident\/resource\/Session"
+        }
+    },
+    "presentation": {
+        "type": "form",
+        "schema": [
+            {
+                "column_name": "episode_id",
+                "column_type": "integer",
+                "type": "fillable",
+                "validation_rules": {
+                    "required": true,
+                    "type": "number",
+                    "trigger": "blur"
+                },
+                "attributes": {
+                    "type": {
+                        "number": true
+                    },
+                    "default_value": "''",
+                    "element_type": false
+                }
+            },
+            {
+                "column_name": "hook",
+                "column_type": "string",
+                "type": "fillable",
+                "validation_rules": {
+                    "required": true,
+                    "type": "string",
+                    "trigger": "blur"
+                },
+                "attributes": {
+                    "type": {
+                        "string": true
+                    },
+                    "default_value": "''",
+                    "element_type": false
+                }
+            },
+            {
+                "column_name": "public_description",
+                "column_type": "string",
+                "type": "fillable",
+                "validation_rules": {
+                    "required": true,
+                    "type": "string",
+                    "trigger": "blur"
+                },
+                "attributes": {
+                    "type": {
+                        "string": true
+                    },
+                    "default_value": "''",
+                    "element_type": false
+                }
+            },
+            {
+                "column_name": "private_description",
+                "column_type": "string",
+                "type": "fillable",
+                "validation_rules": {
+                    "required": true,
+                    "type": "string",
+                    "trigger": "blur"
+                },
+                "attributes": {
+                    "type": {
+                        "string": true
+                    },
+                    "default_value": "''",
+                    "element_type": false
+                }
+            },
+            {
+                "column_name": "starts_at",
+                "column_type": "string",
+                "type": "fillable",
+                "validation_rules": {
+                    "required": true,
+                    "type": "string",
+                    "trigger": "blur"
+                },
+                "attributes": {
+                    "type": {
+                        "string": true
+                    },
+                    "default_value": "''",
+                    "element_type": false
+                }
+            }
+        ]
+    }
+}

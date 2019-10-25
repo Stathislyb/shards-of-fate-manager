@@ -1,0 +1,38 @@
+{
+    "type": "json",
+    "data": {
+        "id": {
+            "resource": true
+        },
+        "player_id": {
+            "resource": true
+        },
+        "name": {
+            "resource": true
+        },
+        "race": {
+            "resource": true
+        },
+        "class": {
+            "resource": true
+        },
+        "level": {
+            "resource": true
+        },
+        "unique_thing": {
+            "resource": true
+        },
+        "focus": {
+            "resource": true
+        },
+        "start_date": {
+            "resource": true
+        },
+        "death_date": {
+            "resource": true
+        },
+        "notes": {
+            "resource": true
+        }
+    }
+}

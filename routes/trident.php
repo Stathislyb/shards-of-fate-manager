@@ -11,4 +11,10 @@
 */
 
 Route::middleware(['auth'])->group(function () {
+    Route::resource('/trident/resource/Chapter', 'ChapterController');
+    Route::resource('/trident/resource/Character', 'CharacterController');
+    Route::resource('/trident/resource/Episode', 'EpisodeController');
+    Route::resource('/trident/resource/Npc', 'NpcController');
+    Route::resource('/trident/resource/Player', 'PlayerController');
+    Route::resource('/trident/resource/Session', 'SessionController');
 });

@@ -1,0 +1,32 @@
+{
+    "type": "json",
+    "data": {
+        "id": {
+            "resource": true
+        },
+        "episode_id": {
+            "resource": true
+        },
+        "user_id": {
+            "resource": true
+        },
+        "hook": {
+            "resource": true
+        },
+        "public_description": {
+            "resource": true
+        },
+        "private_description": {
+            "resource": true
+        },
+        "starts_at": {
+            "resource": true
+        },
+        "created_at": {
+            "resource": true
+        },
+        "updated_at": {
+            "resource": true
+        }
+    }
+}

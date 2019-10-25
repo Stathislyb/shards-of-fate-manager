@@ -1,0 +1,14 @@
+{
+    "type": "json",
+    "data": {
+        "id": {
+            "resource": true
+        },
+        "name": {
+            "resource": true
+        },
+        "description": {
+            "resource": true
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "type": "json",
+    "data": {
+        "id": {
+            "resource": true
+        },
+        "token": {
+            "resource": true
+        },
+        "name": {
+            "resource": true
+        },
+        "description": {
+            "resource": true
+        },
+        "public_notes": {
+            "resource": true
+        },
+        "private_notes": {
+            "resource": true
+        }
+    }
+}

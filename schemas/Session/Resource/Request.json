@@ -1,0 +1,61 @@
+{
+    "type": "json",
+    "data": {
+        "id": {
+            "type": "T::nullable(T::integer())",
+            "validation": {
+                "rule": "integer",
+                "message": "T::string()"
+            },
+            "fillable": false
+        },
+        "episode_id": {
+            "type": "T::nullable(T::integer())",
+            "validation": {
+                "rule": "integer",
+                "message": "T::string()"
+            },
+            "fillable": true
+        },
+        "user_id": {
+            "type": "T::nullable(T::integer())",
+            "validation": {
+                "rule": "integer",
+                "message": "T::string()"
+            },
+            "fillable": true
+        },
+        "hook": {
+            "type": "T::nullable(T::string())",
+            "validation": {
+                "rule": "string",
+                "message": "T::string()"
+            },
+            "fillable": true
+        },
+        "public_description": {
+            "type": "T::nullable(T::string())",
+            "validation": {
+                "rule": "string",
+                "message": "T::string()"
+            },
+            "fillable": true
+        },
+        "private_description": {
+            "type": "T::nullable(T::string())",
+            "validation": {
+                "rule": "string",
+                "message": "T::string()"
+            },
+            "fillable": true
+        },
+        "starts_at": {
+            "type": "T::nullable(T::string())",
+            "validation": {
+                "rule": "string",
+                "message": "T::string()"
+            },
+            "fillable": true
+        }
+    }
+}

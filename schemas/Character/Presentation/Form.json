@@ -1,0 +1,191 @@
+{
+    "ajax": {
+        "get": {
+            "GET": "\/trident\/resource\/Character"
+        },
+        "create": {
+            "POST": "\/trident\/resource\/Character"
+        },
+        "update": {
+            "POST": "\/trident\/resource\/Character"
+        },
+        "delete": {
+            "DELETE": "\/trident\/resource\/Character"
+        }
+    },
+    "presentation": {
+        "type": "form",
+        "schema": [
+            {
+                "column_name": "player_id",
+                "column_type": "integer",
+                "type": "fillable",
+                "validation_rules": {
+                    "required": true,
+                    "type": "number",
+                    "trigger": "blur"
+                },
+                "attributes": {
+                    "type": {
+                        "number": true
+                    },
+                    "default_value": "''",
+                    "element_type": false
+                }
+            },
+            {
+                "column_name": "name",
+                "column_type": "string",
+                "type": "fillable",
+                "validation_rules": {
+                    "required": true,
+                    "type": "string",
+                    "trigger": "blur"
+                },
+                "attributes": {
+                    "type": {
+                        "string": true
+                    },
+                    "default_value": "''",
+                    "element_type": false
+                }
+            },
+            {
+                "column_name": "race",
+                "column_type": "string",
+                "type": "fillable",
+                "validation_rules": {
+                    "required": true,
+                    "type": "string",
+                    "trigger": "blur"
+                },
+                "attributes": {
+                    "type": {
+                        "string": true
+                    },
+                    "default_value": "''",
+                    "element_type": false
+                }
+            },
+            {
+                "column_name": "class",
+                "column_type": "string",
+                "type": "fillable",
+                "validation_rules": {
+                    "required": true,
+                    "type": "string",
+                    "trigger": "blur"
+                },
+                "attributes": {
+                    "type": {
+                        "string": true
+                    },
+                    "default_value": "''",
+                    "element_type": false
+                }
+            },
+            {
+                "column_name": "level",
+                "column_type": "string",
+                "type": "fillable",
+                "validation_rules": {
+                    "required": true,
+                    "type": "string",
+                    "trigger": "blur"
+                },
+                "attributes": {
+                    "type": {
+                        "string": true
+                    },
+                    "default_value": "''",
+                    "element_type": false
+                }
+            },
+            {
+                "column_name": "unique_thing",
+                "column_type": "string",
+                "type": "fillable",
+                "validation_rules": {
+                    "required": true,
+                    "type": "string",
+                    "trigger": "blur"
+                },
+                "attributes": {
+                    "type": {
+                        "string": true
+                    },
+                    "default_value": "''",
+                    "element_type": false
+                }
+            },
+            {
+                "column_name": "focus",
+                "column_type": "string",
+                "type": "fillable",
+                "validation_rules": {
+                    "required": true,
+                    "type": "string",
+                    "trigger": "blur"
+                },
+                "attributes": {
+                    "type": {
+                        "string": true
+                    },
+                    "default_value": "''",
+                    "element_type": false
+                }
+            },
+            {
+                "column_name": "start_date",
+                "column_type": "string",
+                "type": "fillable",
+                "validation_rules": {
+                    "required": true,
+                    "type": "string",
+                    "trigger": "blur"
+                },
+                "attributes": {
+                    "type": {
+                        "string": true
+                    },
+                    "default_value": "''",
+                    "element_type": false
+                }
+            },
+            {
+                "column_name": "death_date",
+                "column_type": "string",
+                "type": "fillable",
+                "validation_rules": {
+                    "required": true,
+                    "type": "string",
+                    "trigger": "blur"
+                },
+                "attributes": {
+                    "type": {
+                        "string": true
+                    },
+                    "default_value": "''",
+                    "element_type": false
+                }
+            },
+            {
+                "column_name": "notes",
+                "column_type": "string",
+                "type": "fillable",
+                "validation_rules": {
+                    "required": true,
+                    "type": "string",
+                    "trigger": "blur"
+                },
+                "attributes": {
+                    "type": {
+                        "string": true
+                    },
+                    "default_value": "''",
+                    "element_type": false
+                }
+            }
+        ]
+    }
+}
