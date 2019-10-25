@@ -1,10 +1,8 @@
-# trident-vista-project
+# Shards of Fate Manager
 
-A laravel project with [Trident](https://github.com/j0hnys/trident) and [Vista](https://github.com/j0hnys/vista) pre-installed
+A web application to allow easier management for the shards of fate campaign.
 
-## Installation
+## System
 
- 1. `composer update`
- 2. `npm install`
- 3. `php artisan key:generate`
- 4. edit `.env` if needed. `MIX_BASE_URL_BACKEND` and `MIX_BASE_RELATIVE_URL_BACKEND` must match current url. If not update them and `npm run prod`
+The campaign is a play test for a guild based DnD game with multiple DMs and players. 
+The current version of the proposed system is described here: https://drive.google.com/open?id=1oT-o6u3ztoLZkAc5u76_rxYgAyPOnHSpPpNmFha_3kY
