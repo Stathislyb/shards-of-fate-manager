@@ -1,3 +1,4 @@
+
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -6,20 +7,59 @@
 
 require('./bootstrap');
 
+import iView from 'iview';
+import VueRouter from 'vue-router';
+import store from './store';
+import App from './app.vue';
+import Routers from './router.js';
+import RegisterComponents from './plugins/registerComponents';
+// import 'iview/dist/styles/iview.css';
+
 window.Vue = require('vue');
+window.iView = require('iview');
 
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
+Vue.use(VueRouter);
+Vue.use(iView);
+Vue.use(RegisterComponents);
 
-// const files = require.context('./', true, /\.vue$/i);
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
+//
+//tmp
+var util = {};
+util.title = function (title) {
+    title = title ? title + ' - Home' : 'iView project';
+    window.document.title = title;
+};
+//
+//
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+
+//
+//router
+
+//initialize
+const RouterConfig = {
+    mode: 'history',
+    routes: Routers
+};
+const router = new VueRouter(RouterConfig);
+
+//set intial states
+router.beforeEach((to, from, next) => {
+    iView.LoadingBar.start();
+    util.title(to.meta.title);
+    next();
+});
+
+router.afterEach((to, from, next) => {
+    iView.LoadingBar.finish();
+    window.scrollTo(0, 0);
+});
+
+
+//vvv global event bus
+Vue.prototype.$global_events = new Vue();
+//^^^
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -29,4 +69,8 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 
 const app = new Vue({
     el: '#app',
+    components: { App },
+    router: router,
+    store,
+    render: h => h(App)
 });

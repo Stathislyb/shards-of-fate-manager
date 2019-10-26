@@ -2096,7 +2096,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     },
     onLogoutButtonClicked: function onLogoutButtonClicked(name) {
       if (name == 'logout') {
-        this.$router.push("/shards_of_fate/public_backend" + '/logout');
+        this.$router.push("" + '/logout');
         window.location.reload();
       }
     }
@@ -2369,7 +2369,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             }
           }
 
-          window.axios.post("/shards_of_fate/public_backend" + '/trident/resource/Chapter', form_data).then(function (response) {
+          window.axios.post("" + '/trident/resource/Chapter', form_data).then(function (response) {
             // Once AJAX resolves we can update the Crud with the new color
             self.$Message.success('Success!');
           })["catch"](function (error) {
@@ -2548,7 +2548,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       return {
         get: function get() {
           var id = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-          window.axios.get("/shards_of_fate/public_backend" + '/trident/resource/Chapter' + id).then(function (_ref) {
+          window.axios.get("" + '/trident/resource/Chapter' + id).then(function (_ref) {
             var data = _ref.data;
             // console.log(data);
             self.data = data;
@@ -2557,7 +2557,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           });
         },
         "delete": function _delete(id) {
-          window.axios["delete"]("/shards_of_fate/public_backend" + '/trident/resource/Chapter/' + id).then(function (_ref2) {
+          window.axios["delete"]("" + '/trident/resource/Chapter/' + id).then(function (_ref2) {
             var data = _ref2.data;
             // console.log(data);
             window.location.reload();
@@ -2702,7 +2702,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       return {
         get: function get() {
           var id = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-          window.axios.get("/shards_of_fate/public_backend" + '/trident/resource/Chapter/' + id).then(function (_ref) {
+          window.axios.get("" + '/trident/resource/Chapter/' + id).then(function (_ref) {
             var data = _ref.data;
             self.formValidate = data;
           })["catch"](function (error) {
@@ -2725,7 +2725,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             }
           }
 
-          window.axios.post("/shards_of_fate/public_backend" + '/trident/resource/Chapter/' + id, form_data).then(function (response) {
+          window.axios.post("" + '/trident/resource/Chapter/' + id, form_data).then(function (response) {
             // Once AJAX resolves we can update the Crud with the new color
             self.$Message.success('Success!');
           })["catch"](function (error) {
@@ -2976,7 +2976,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             }
           }
 
-          window.axios.post("/shards_of_fate/public_backend" + '/trident/resource/Character', form_data).then(function (response) {
+          window.axios.post("" + '/trident/resource/Character', form_data).then(function (response) {
             // Once AJAX resolves we can update the Crud with the new color
             self.$Message.success('Success!');
           })["catch"](function (error) {
@@ -3187,7 +3187,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       return {
         get: function get() {
           var id = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-          window.axios.get("/shards_of_fate/public_backend" + '/trident/resource/Character' + id).then(function (_ref) {
+          window.axios.get("" + '/trident/resource/Character' + id).then(function (_ref) {
             var data = _ref.data;
             // console.log(data);
             self.data = data;
@@ -3196,7 +3196,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           });
         },
         "delete": function _delete(id) {
-          window.axios["delete"]("/shards_of_fate/public_backend" + '/trident/resource/Character/' + id).then(function (_ref2) {
+          window.axios["delete"]("" + '/trident/resource/Character/' + id).then(function (_ref2) {
             var data = _ref2.data;
             // console.log(data);
             window.location.reload();
@@ -3421,7 +3421,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       return {
         get: function get() {
           var id = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-          window.axios.get("/shards_of_fate/public_backend" + '/trident/resource/Character/' + id).then(function (_ref) {
+          window.axios.get("" + '/trident/resource/Character/' + id).then(function (_ref) {
             var data = _ref.data;
             self.formValidate = data;
           })["catch"](function (error) {
@@ -3444,7 +3444,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             }
           }
 
-          window.axios.post("/shards_of_fate/public_backend" + '/trident/resource/Character/' + id, form_data).then(function (response) {
+          window.axios.post("" + '/trident/resource/Character/' + id, form_data).then(function (response) {
             // Once AJAX resolves we can update the Crud with the new color
             self.$Message.success('Success!');
           })["catch"](function (error) {
@@ -3625,7 +3625,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             }
           }
 
-          window.axios.post("/shards_of_fate/public_backend" + '/trident/resource/Episode', form_data).then(function (response) {
+          window.axios.post("" + '/trident/resource/Episode', form_data).then(function (response) {
             // Once AJAX resolves we can update the Crud with the new color
             self.$Message.success('Success!');
           })["catch"](function (error) {
@@ -3808,7 +3808,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       return {
         get: function get() {
           var id = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-          window.axios.get("/shards_of_fate/public_backend" + '/trident/resource/Episode' + id).then(function (_ref) {
+          window.axios.get("" + '/trident/resource/Episode' + id).then(function (_ref) {
             var data = _ref.data;
             // console.log(data);
             self.data = data;
@@ -3817,7 +3817,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           });
         },
         "delete": function _delete(id) {
-          window.axios["delete"]("/shards_of_fate/public_backend" + '/trident/resource/Episode/' + id).then(function (_ref2) {
+          window.axios["delete"]("" + '/trident/resource/Episode/' + id).then(function (_ref2) {
             var data = _ref2.data;
             // console.log(data);
             window.location.reload();
@@ -3972,7 +3972,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       return {
         get: function get() {
           var id = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-          window.axios.get("/shards_of_fate/public_backend" + '/trident/resource/Episode/' + id).then(function (_ref) {
+          window.axios.get("" + '/trident/resource/Episode/' + id).then(function (_ref) {
             var data = _ref.data;
             self.formValidate = data;
           })["catch"](function (error) {
@@ -3995,7 +3995,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             }
           }
 
-          window.axios.post("/shards_of_fate/public_backend" + '/trident/resource/Episode/' + id, form_data).then(function (response) {
+          window.axios.post("" + '/trident/resource/Episode/' + id, form_data).then(function (response) {
             // Once AJAX resolves we can update the Crud with the new color
             self.$Message.success('Success!');
           })["catch"](function (error) {
@@ -4183,7 +4183,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             }
           }
 
-          window.axios.post("/shards_of_fate/public_backend" + '/trident/resource/Npc', form_data).then(function (response) {
+          window.axios.post("" + '/trident/resource/Npc', form_data).then(function (response) {
             // Once AJAX resolves we can update the Crud with the new color
             self.$Message.success('Success!');
           })["catch"](function (error) {
@@ -4370,7 +4370,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       return {
         get: function get() {
           var id = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-          window.axios.get("/shards_of_fate/public_backend" + '/trident/resource/Npc' + id).then(function (_ref) {
+          window.axios.get("" + '/trident/resource/Npc' + id).then(function (_ref) {
             var data = _ref.data;
             // console.log(data);
             self.data = data;
@@ -4379,7 +4379,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           });
         },
         "delete": function _delete(id) {
-          window.axios["delete"]("/shards_of_fate/public_backend" + '/trident/resource/Npc/' + id).then(function (_ref2) {
+          window.axios["delete"]("" + '/trident/resource/Npc/' + id).then(function (_ref2) {
             var data = _ref2.data;
             // console.log(data);
             window.location.reload();
@@ -4541,7 +4541,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       return {
         get: function get() {
           var id = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-          window.axios.get("/shards_of_fate/public_backend" + '/trident/resource/Npc/' + id).then(function (_ref) {
+          window.axios.get("" + '/trident/resource/Npc/' + id).then(function (_ref) {
             var data = _ref.data;
             self.formValidate = data;
           })["catch"](function (error) {
@@ -4564,7 +4564,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             }
           }
 
-          window.axios.post("/shards_of_fate/public_backend" + '/trident/resource/Npc/' + id, form_data).then(function (response) {
+          window.axios.post("" + '/trident/resource/Npc/' + id, form_data).then(function (response) {
             // Once AJAX resolves we can update the Crud with the new color
             self.$Message.success('Success!');
           })["catch"](function (error) {
@@ -4745,7 +4745,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             }
           }
 
-          window.axios.post("/shards_of_fate/public_backend" + '/trident/resource/Player', form_data).then(function (response) {
+          window.axios.post("" + '/trident/resource/Player', form_data).then(function (response) {
             // Once AJAX resolves we can update the Crud with the new color
             self.$Message.success('Success!');
           })["catch"](function (error) {
@@ -4928,7 +4928,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       return {
         get: function get() {
           var id = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-          window.axios.get("/shards_of_fate/public_backend" + '/trident/resource/Player' + id).then(function (_ref) {
+          window.axios.get("" + '/trident/resource/Player' + id).then(function (_ref) {
             var data = _ref.data;
             // console.log(data);
             self.data = data;
@@ -4937,7 +4937,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           });
         },
         "delete": function _delete(id) {
-          window.axios["delete"]("/shards_of_fate/public_backend" + '/trident/resource/Player/' + id).then(function (_ref2) {
+          window.axios["delete"]("" + '/trident/resource/Player/' + id).then(function (_ref2) {
             var data = _ref2.data;
             // console.log(data);
             window.location.reload();
@@ -5092,7 +5092,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       return {
         get: function get() {
           var id = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-          window.axios.get("/shards_of_fate/public_backend" + '/trident/resource/Player/' + id).then(function (_ref) {
+          window.axios.get("" + '/trident/resource/Player/' + id).then(function (_ref) {
             var data = _ref.data;
             self.formValidate = data;
           })["catch"](function (error) {
@@ -5115,7 +5115,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             }
           }
 
-          window.axios.post("/shards_of_fate/public_backend" + '/trident/resource/Player/' + id, form_data).then(function (response) {
+          window.axios.post("" + '/trident/resource/Player/' + id, form_data).then(function (response) {
             // Once AJAX resolves we can update the Crud with the new color
             self.$Message.success('Success!');
           })["catch"](function (error) {
@@ -5316,7 +5316,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             }
           }
 
-          window.axios.post("/shards_of_fate/public_backend" + '/trident/resource/Session', form_data).then(function (response) {
+          window.axios.post("" + '/trident/resource/Session', form_data).then(function (response) {
             // Once AJAX resolves we can update the Crud with the new color
             self.$Message.success('Success!');
           })["catch"](function (error) {
@@ -5511,7 +5511,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       return {
         get: function get() {
           var id = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-          window.axios.get("/shards_of_fate/public_backend" + '/trident/resource/Session' + id).then(function (_ref) {
+          window.axios.get("" + '/trident/resource/Session' + id).then(function (_ref) {
             var data = _ref.data;
             // console.log(data);
             self.data = data;
@@ -5520,7 +5520,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           });
         },
         "delete": function _delete(id) {
-          window.axios["delete"]("/shards_of_fate/public_backend" + '/trident/resource/Session/' + id).then(function (_ref2) {
+          window.axios["delete"]("" + '/trident/resource/Session/' + id).then(function (_ref2) {
             var data = _ref2.data;
             // console.log(data);
             window.location.reload();
@@ -5701,7 +5701,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       return {
         get: function get() {
           var id = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-          window.axios.get("/shards_of_fate/public_backend" + '/trident/resource/Session/' + id).then(function (_ref) {
+          window.axios.get("" + '/trident/resource/Session/' + id).then(function (_ref) {
             var data = _ref.data;
             self.formValidate = data;
           })["catch"](function (error) {
@@ -5724,7 +5724,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             }
           }
 
-          window.axios.post("/shards_of_fate/public_backend" + '/trident/resource/Session/' + id, form_data).then(function (response) {
+          window.axios.post("" + '/trident/resource/Session/' + id, form_data).then(function (response) {
             // Once AJAX resolves we can update the Crud with the new color
             self.$Message.success('Success!');
           })["catch"](function (error) {
@@ -106445,32 +106445,32 @@ var main_menu = [{
   name: '1',
   icon_type: 'ios-navigate',
   text: 'chapters',
-  redirect_url: "/shards_of_fate/public_backend" + '/chapter_list'
+  redirect_url: "" + '/chapter_list'
 }, {
   name: '2',
   icon_type: 'ios-navigate',
   text: 'episodes',
-  redirect_url: "/shards_of_fate/public_backend" + '/episode_list'
+  redirect_url: "" + '/episode_list'
 }, {
   name: '3',
   icon_type: 'ios-navigate',
   text: 'sessions',
-  redirect_url: "/shards_of_fate/public_backend" + '/session_list'
+  redirect_url: "" + '/session_list'
 }, {
   name: '4',
   icon_type: 'ios-navigate',
   text: 'players',
-  redirect_url: "/shards_of_fate/public_backend" + '/player_list'
+  redirect_url: "" + '/player_list'
 }, {
   name: '5',
   icon_type: 'ios-navigate',
   text: 'characters',
-  redirect_url: "/shards_of_fate/public_backend" + '/character_list'
+  redirect_url: "" + '/character_list'
 }, {
   name: '6',
   icon_type: 'ios-navigate',
   text: 'npcs',
-  redirect_url: "/shards_of_fate/public_backend" + '/npc_list'
+  redirect_url: "" + '/npc_list'
 }];
 /* harmony default export */ __webpack_exports__["default"] = (main_menu);
 
@@ -106489,58 +106489,58 @@ var demo_sub_menu = [{
   name: '1',
   icon_type: 'ios-navigate',
   text: 'sub Option 1',
-  redirect_url: "/shards_of_fate/public_backend" + '/'
+  redirect_url: "" + '/'
 }, {
   name: '2',
   icon_type: 'ios-navigate',
   text: 'sub Option 2',
-  redirect_url: "/shards_of_fate/public_backend" + '/'
+  redirect_url: "" + '/'
 }, {
   name: '3',
   icon_type: 'ios-navigate',
   text: 'sub Option 3',
-  redirect_url: "/shards_of_fate/public_backend" + '/',
+  redirect_url: "" + '/',
   children: [{
     name: '3-1',
     icon_type: 'ios-navigate',
     text: 'sub Option group name 1',
-    redirect_url: "/shards_of_fate/public_backend" + '/',
+    redirect_url: "" + '/',
     children: [{
       name: '3-1-1',
       icon_type: 'ios-navigate',
       text: 'sub Option 3-1',
-      redirect_url: "/shards_of_fate/public_backend" + '/'
+      redirect_url: "" + '/'
     }, {
       name: '3-1-2',
       icon_type: 'ios-navigate',
       text: 'sub Option 3-2',
-      redirect_url: "/shards_of_fate/public_backend" + '/'
+      redirect_url: "" + '/'
     }, {
       name: '3-1-3',
       icon_type: 'ios-navigate',
       text: 'sub Option 3-3',
-      redirect_url: "/shards_of_fate/public_backend" + '/'
+      redirect_url: "" + '/'
     }]
   }, {
     name: '3-2',
     icon_type: 'ios-navigate',
     text: 'sub Option group name 2',
-    redirect_url: "/shards_of_fate/public_backend" + '/',
+    redirect_url: "" + '/',
     children: [{
       name: '3-2-1',
       icon_type: 'ios-navigate',
       text: 'sub Option 3-4',
-      redirect_url: "/shards_of_fate/public_backend" + '/'
+      redirect_url: "" + '/'
     }, {
       name: '3-2-2',
       icon_type: 'ios-navigate',
       text: 'sub Option 3-5',
-      redirect_url: "/shards_of_fate/public_backend" + '/'
+      redirect_url: "" + '/'
     }, {
       name: '3-2-3',
       icon_type: 'ios-navigate',
       text: 'sub Option 3-6',
-      redirect_url: "/shards_of_fate/public_backend" + '/'
+      redirect_url: "" + '/'
     }]
   }]
 }];
@@ -108217,7 +108217,7 @@ var routes = __webpack_require__(/*! ./router.pages.js */ "./resources_backend/j
 var sub_menus = __webpack_require__(/*! ./router.submenus.js */ "./resources_backend/js/router.submenus.js");
 
 var routers = [{
-  path: "/shards_of_fate/public_backend" + '/',
+  path: "" + '/',
   title: 'otinanai',
   name: '/',
   component: routes.index,
@@ -108227,7 +108227,7 @@ var routers = [{
   }
 }, {
   // add "import chapter_list_delete from './pages/chapter_list_delete.vue';" at the top
-  path: "/shards_of_fate/public_backend" + '/chapter_list',
+  path: "" + '/chapter_list',
   title: 'otinanai',
   name: 'chapter_list_delete',
   component: routes.chapter_list_delete,
@@ -108236,7 +108236,7 @@ var routers = [{
   }
 }, {
   // add "import chapter_create from './pages/chapter_create.vue';" at the top
-  path: "/shards_of_fate/public_backend" + '/chapter_create',
+  path: "" + '/chapter_create',
   title: 'otinanai',
   name: 'chapter_create',
   component: routes.chapter_create,
@@ -108245,7 +108245,7 @@ var routers = [{
   }
 }, {
   // add "import chapter_update from './pages/chapter_update.vue';" at the top
-  path: "/shards_of_fate/public_backend" + '/chapter_update/:id',
+  path: "" + '/chapter_update/:id',
   title: 'otinanai',
   name: 'chapter_update',
   component: routes.chapter_update,
@@ -108254,7 +108254,7 @@ var routers = [{
   }
 }, {
   // add "import chapter_list_delete from './pages/chapter_list_delete.vue';" at the top
-  path: "/shards_of_fate/public_backend" + '/chapter_list',
+  path: "" + '/chapter_list',
   title: 'otinanai',
   name: 'chapter_list_delete',
   component: routes.chapter_list_delete,
@@ -108263,7 +108263,7 @@ var routers = [{
   }
 }, {
   // add "import chapter_create from './pages/chapter_create.vue';" at the top
-  path: "/shards_of_fate/public_backend" + '/chapter_create',
+  path: "" + '/chapter_create',
   title: 'otinanai',
   name: 'chapter_create',
   component: routes.chapter_create,
@@ -108272,7 +108272,7 @@ var routers = [{
   }
 }, {
   // add "import chapter_update from './pages/chapter_update.vue';" at the top
-  path: "/shards_of_fate/public_backend" + '/chapter_update/:id',
+  path: "" + '/chapter_update/:id',
   title: 'otinanai',
   name: 'chapter_update',
   component: routes.chapter_update,
@@ -108281,7 +108281,7 @@ var routers = [{
   }
 }, {
   // add "import chapter_list_delete from './pages/chapter_list_delete.vue';" at the top
-  path: "/shards_of_fate/public_backend" + '/chapter_list',
+  path: "" + '/chapter_list',
   title: 'otinanai',
   name: 'chapter_list_delete',
   component: routes.chapter_list_delete,
@@ -108290,7 +108290,7 @@ var routers = [{
   }
 }, {
   // add "import chapter_create from './pages/chapter_create.vue';" at the top
-  path: "/shards_of_fate/public_backend" + '/chapter_create',
+  path: "" + '/chapter_create',
   title: 'otinanai',
   name: 'chapter_create',
   component: routes.chapter_create,
@@ -108299,7 +108299,7 @@ var routers = [{
   }
 }, {
   // add "import chapter_update from './pages/chapter_update.vue';" at the top
-  path: "/shards_of_fate/public_backend" + '/chapter_update/:id',
+  path: "" + '/chapter_update/:id',
   title: 'otinanai',
   name: 'chapter_update',
   component: routes.chapter_update,
@@ -108308,7 +108308,7 @@ var routers = [{
   }
 }, {
   // add "import episode_list_delete from './pages/episode_list_delete.vue';" at the top
-  path: "/shards_of_fate/public_backend" + '/episode_list',
+  path: "" + '/episode_list',
   title: 'otinanai',
   name: 'episode_list_delete',
   component: routes.episode_list_delete,
@@ -108317,7 +108317,7 @@ var routers = [{
   }
 }, {
   // add "import episode_create from './pages/episode_create.vue';" at the top
-  path: "/shards_of_fate/public_backend" + '/episode_create',
+  path: "" + '/episode_create',
   title: 'otinanai',
   name: 'episode_create',
   component: routes.episode_create,
@@ -108326,7 +108326,7 @@ var routers = [{
   }
 }, {
   // add "import episode_update from './pages/episode_update.vue';" at the top
-  path: "/shards_of_fate/public_backend" + '/episode_update/:id',
+  path: "" + '/episode_update/:id',
   title: 'otinanai',
   name: 'episode_update',
   component: routes.episode_update,
@@ -108335,7 +108335,7 @@ var routers = [{
   }
 }, {
   // add "import session_list_delete from './pages/session_list_delete.vue';" at the top
-  path: "/shards_of_fate/public_backend" + '/session_list',
+  path: "" + '/session_list',
   title: 'otinanai',
   name: 'session_list_delete',
   component: routes.session_list_delete,
@@ -108344,7 +108344,7 @@ var routers = [{
   }
 }, {
   // add "import session_create from './pages/session_create.vue';" at the top
-  path: "/shards_of_fate/public_backend" + '/session_create',
+  path: "" + '/session_create',
   title: 'otinanai',
   name: 'session_create',
   component: routes.session_create,
@@ -108353,7 +108353,7 @@ var routers = [{
   }
 }, {
   // add "import session_update from './pages/session_update.vue';" at the top
-  path: "/shards_of_fate/public_backend" + '/session_update/:id',
+  path: "" + '/session_update/:id',
   title: 'otinanai',
   name: 'session_update',
   component: routes.session_update,
@@ -108362,7 +108362,7 @@ var routers = [{
   }
 }, {
   // add "import session_list_delete from './pages/session_list_delete.vue';" at the top
-  path: "/shards_of_fate/public_backend" + '/session_list',
+  path: "" + '/session_list',
   title: 'otinanai',
   name: 'session_list_delete',
   component: routes.session_list_delete,
@@ -108371,7 +108371,7 @@ var routers = [{
   }
 }, {
   // add "import session_create from './pages/session_create.vue';" at the top
-  path: "/shards_of_fate/public_backend" + '/session_create',
+  path: "" + '/session_create',
   title: 'otinanai',
   name: 'session_create',
   component: routes.session_create,
@@ -108380,7 +108380,7 @@ var routers = [{
   }
 }, {
   // add "import session_update from './pages/session_update.vue';" at the top
-  path: "/shards_of_fate/public_backend" + '/session_update/:id',
+  path: "" + '/session_update/:id',
   title: 'otinanai',
   name: 'session_update',
   component: routes.session_update,
@@ -108389,7 +108389,7 @@ var routers = [{
   }
 }, {
   // add "import player_list_delete from './pages/player_list_delete.vue';" at the top
-  path: "/shards_of_fate/public_backend" + '/player_list',
+  path: "" + '/player_list',
   title: 'otinanai',
   name: 'player_list_delete',
   component: routes.player_list_delete,
@@ -108398,7 +108398,7 @@ var routers = [{
   }
 }, {
   // add "import player_create from './pages/player_create.vue';" at the top
-  path: "/shards_of_fate/public_backend" + '/player_create',
+  path: "" + '/player_create',
   title: 'otinanai',
   name: 'player_create',
   component: routes.player_create,
@@ -108407,7 +108407,7 @@ var routers = [{
   }
 }, {
   // add "import player_update from './pages/player_update.vue';" at the top
-  path: "/shards_of_fate/public_backend" + '/player_update/:id',
+  path: "" + '/player_update/:id',
   title: 'otinanai',
   name: 'player_update',
   component: routes.player_update,
@@ -108416,7 +108416,7 @@ var routers = [{
   }
 }, {
   // add "import character_list_delete from './pages/character_list_delete.vue';" at the top
-  path: "/shards_of_fate/public_backend" + '/character_list',
+  path: "" + '/character_list',
   title: 'otinanai',
   name: 'character_list_delete',
   component: routes.character_list_delete,
@@ -108425,7 +108425,7 @@ var routers = [{
   }
 }, {
   // add "import character_create from './pages/character_create.vue';" at the top
-  path: "/shards_of_fate/public_backend" + '/character_create',
+  path: "" + '/character_create',
   title: 'otinanai',
   name: 'character_create',
   component: routes.character_create,
@@ -108434,7 +108434,7 @@ var routers = [{
   }
 }, {
   // add "import character_update from './pages/character_update.vue';" at the top
-  path: "/shards_of_fate/public_backend" + '/character_update/:id',
+  path: "" + '/character_update/:id',
   title: 'otinanai',
   name: 'character_update',
   component: routes.character_update,
@@ -108443,7 +108443,7 @@ var routers = [{
   }
 }, {
   // add "import npc_list_delete from './pages/npc_list_delete.vue';" at the top
-  path: "/shards_of_fate/public_backend" + '/npc_list',
+  path: "" + '/npc_list',
   title: 'otinanai',
   name: 'npc_list_delete',
   component: routes.npc_list_delete,
@@ -108452,7 +108452,7 @@ var routers = [{
   }
 }, {
   // add "import npc_create from './pages/npc_create.vue';" at the top
-  path: "/shards_of_fate/public_backend" + '/npc_create',
+  path: "" + '/npc_create',
   title: 'otinanai',
   name: 'npc_create',
   component: routes.npc_create,
@@ -108461,7 +108461,7 @@ var routers = [{
   }
 }, {
   // add "import npc_update from './pages/npc_update.vue';" at the top
-  path: "/shards_of_fate/public_backend" + '/npc_update/:id',
+  path: "" + '/npc_update/:id',
   title: 'otinanai',
   name: 'npc_update',
   component: routes.npc_update,

@@ -1,0 +1,5 @@
+const MUTATION_TYPES = {
+    SET_BREADCRUMBS: 'SET_BREADCRUMBS',
+};
+
+export default MUTATION_TYPES;
