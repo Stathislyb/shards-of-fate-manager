@@ -1,7 +1,8 @@
 import HelloType, { Dict, Enum, Tuple, List, Type, Rule, Self, IfExists } from 'hello-type'
 
 const TestType = new Type({
-    variable: String,
+    chapter_modal: Boolean,
+    edit_chapter: Object
 });
 
 

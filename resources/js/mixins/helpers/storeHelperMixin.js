@@ -5,13 +5,13 @@ export default {
         {
             if(typeof params === 'undefined') 
             {
-                return this.$store.getters['global/' + getter]
+                return this.$store.getters[getter]
             }
-            return this.$store.getters['global/' + getter](params)
+            return this.$store.getters[getter](params)
         },
         dispatchAction(action, params = {})
         {
-            return this.$store.dispatch('global/' + action, params);
+            return this.$store.dispatch(action, params);
         },
     }
 }

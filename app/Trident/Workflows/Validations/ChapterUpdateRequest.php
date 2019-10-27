@@ -26,9 +26,9 @@ class ChapterUpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'id' => 'integer',
-            'name' => 'string',
-            'description' => 'string',
+            'id' => 'integer|required',
+            'name' => 'string|required',
+            'description' => 'string|nullable',
         ];
     }
 

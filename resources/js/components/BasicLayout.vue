@@ -97,10 +97,10 @@
                 </Breadcrumb>
 
                 <Card>
-                    <div style="height: 600px">
-                        <!-- here we will put the content of the page -->
+                    <div style="min-height: 600px">
+                    
                         <slot></slot>
-                        <!--  -->
+                        
                     </div>
                 </Card>
             </Content>
@@ -108,9 +108,11 @@
     </div>
 </template>
 <script>
+    const namespace = 'components/BasicLayout';
     export default {
-        namespace: 'components/BasicLayout',
+        namespace: namespace,
         name: 'BasicLayout',
+        mixins: ['helpers/storeHelperMixin'],
         data () {
             return {
                 active_menu_name: 1,
@@ -118,10 +120,10 @@
         },
         computed: {
             breadcrumbs () {
-                return this.getFromStore('breadcrumbs');
+                return this.getFromStore(namespace + '/breadcrumbs');
             },
             mainMenu () {
-                return this.getFromStore('mainMenu');
+                return this.getFromStore(namespace + '/mainMenu');
             },
             menuitemClasses: function () {
                 return [
@@ -134,7 +136,7 @@
 
                 var indexes = menu_name.split('-');
 
-                var main_menu = this.getFromStore('mainMenu');
+                var main_menu = this.getFromStore(namespace + '/mainMenu');
                 var current_menu_level = main_menu;
 
                 let main_menu_breadcrumb = [];
@@ -147,7 +149,7 @@
                     }
                 }
 
-                this.dispatchAction('setBreadcrumbs', main_menu_breadcrumb);
+                this.dispatchAction(namespace + '/setBreadcrumbs', main_menu_breadcrumb);
             },
             onDropdownButtonClicked(name) {
                 if (name == 'logout') {
@@ -157,7 +159,7 @@
             },
         },
         mounted() {
-            var navigation = this.getFromStore('navigation');
+            var navigation = this.getFromStore(namespace + '/navigation');
 
             var current_menu = navigation.main_menu[0];
 
@@ -173,10 +175,10 @@
             }
 
             const main_menu_breadcrumb = [{
-                text: current_menu.text
+                text: current_menu.text 
             }];
 
-            this.dispatchAction('setBreadcrumbs', main_menu_breadcrumb);
+            this.dispatchAction(namespace + '/setBreadcrumbs', main_menu_breadcrumb);
         },
     }
 </script>

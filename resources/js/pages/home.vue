@@ -1,43 +1,31 @@
 <style scoped>
     .index {
-        width: 100%;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        text-align: center;
-    }
-        .index h1 {
-            height: 150px;
-        }
-            .index h1 img {
-                height: 100%;
-            }
-        .index h2 {
-            color: #666;
-            margin-bottom: 200px;
-        }
-            .index h2 p {
-                margin: 0 0 50px;
-            }
-    .ivu-row-flex {
-        height: 100%;
+        margin-top: 40px;
     }
 </style>
 
 <template>
     <div class="index">
-        <Row type="flex" justify="center" align="middle">
-            <Col span="24">
-                <h1>
-                    Hi!
-                </h1>
+        <Row type="flex" justify="center">
+            <Col span="20">
 
-                <router-link :to="{name:'/'}">Home</router-link>
+                <chapter-tabs
+                    :chapters="chapters"
+                    @onMakeNewChapter="handleMakeNewChapter"
+                />
 
-                <h2>
-                    <p>Welcome to your Trident-Vista app!</p>
-                </h2>
+                <Modal
+                    title="Add Chapter"
+                    v-model="chapter_modal"
+                    footer-hide
+                >
+                    <chapter-form
+                        :editChapter="edit_chapter"
+                        @onChapterCreate="handleChapterCreate"
+                        @onChapterEdit="handleChapterEdit"
+                    />
+                </Modal>
+
             </Col>
         </Row>
     </div>
@@ -48,27 +36,54 @@
     export default {
         namespace: namespace,
         name: 'Home',
-        mixins: ['helpers/typecheckMixin'],
-        data() {
-            return {
-                variable: '',
-            };
-        },
+        mixins: ['helpers/storeHelperMixin', 'helpers/typecheckMixin'],
         types: {
             namespace: namespace,
         },
+        data() {
+            return {
+                chapter_modal: false,
+                edit_chapter: {},
+            };
+        },
+        computed: {
+            chapters () {
+                return this.getFromStore(namespace + '/chapters');
+            },
+        },
         methods: {
-            handleStart () {
-                this.$Modal.info({
-                    title: 'Bravo',
-                    content: 'Now, enjoy the convenience of iView.'
+            initPage () {
+                this.loadChapters();
+            },
+
+            handleMakeNewChapter () {
+                this.edit_chapter = {};
+                this.chapter_modal = true;
+            },
+            closeModal () {
+                this.edit_chapter = {};
+                this.chapter_modal = false;
+            },
+            async loadChapters () {
+                this.dispatchAction(namespace + '/requestChapters').then(response => {
+                    this.dispatchAction(namespace + '/setChapters', response.data);
                 });
-                
-                this.$global_events.$emit(namespace, 'opened modal');
-            }
+            },
+            async handleChapterCreate (chapter) {
+                this.dispatchAction(namespace + '/submitChapterCreate', chapter).then(response => {
+                    this.closeModal();
+                    this.loadChapters();
+                });
+            },
+            async handleChapterEdit (chapter) {
+                this.dispatchAction(namespace + '/submitChapterEdit', chapter).then(response => {
+                    this.closeModal();
+                    this.loadChapters();
+                });
+            },
         },
         mounted() {
-            this.handleStart();
+            this.initPage();
         },
     }
 </script>

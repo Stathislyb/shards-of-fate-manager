@@ -26,9 +26,8 @@ class ChapterStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'id' => 'integer|required',
             'name' => 'string|required',
-            'description' => 'string',
+            'description' => 'string|nullable',
         ];
     }
 
@@ -40,7 +39,6 @@ class ChapterStoreRequest extends FormRequest
     public function messages()
     {
         return [
-            'id' => 'T::string()',
             'name' => 'T::string()',
             'description' => 'T::string()',
         ];
