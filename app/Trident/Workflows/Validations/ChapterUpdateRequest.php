@@ -54,7 +54,7 @@ class ChapterUpdateRequest extends FormRequest
     public function all($keys = null) 
     {
         $data = parent::all($keys);
-        $data['id'] = (int)$this->route('Chapter');
+        $data['id'] = (int)$this->route('chapter');
 
         return $data;
     }

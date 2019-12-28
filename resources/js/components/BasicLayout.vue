@@ -167,7 +167,7 @@
                 if (navigation.main_menu.hasOwnProperty(i)) {
                     const element = navigation.main_menu[i];
                     
-                    if (this.$router.resolve(this.$route.matched[0].path).href === element.redirect_url) {
+                    if (this.$route.matched[0] && this.$router.resolve(this.$route.matched[0].path).href === element.redirect_url) {
                         this.active_menu_name = element.name;
                         current_menu = element;
                     }

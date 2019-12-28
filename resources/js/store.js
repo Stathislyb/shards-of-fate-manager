@@ -26,6 +26,7 @@ const store = new Vuex.Store({
             namespaced: true,
             modules: {
                 Home: stores.home,
+                Focus: stores.focus,
             }
         },
     },

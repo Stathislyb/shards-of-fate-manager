@@ -70,7 +70,7 @@ class CharacterUpdateRequest extends FormRequest
     public function all($keys = null) 
     {
         $data = parent::all($keys);
-        $data['id'] = (int)$this->route('Character');
+        $data['id'] = (int)$this->route('character');
         $data['player_id'] = (int)$data['player_id'];
         return $data;
     }

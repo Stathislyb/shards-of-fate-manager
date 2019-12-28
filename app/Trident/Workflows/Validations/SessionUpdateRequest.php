@@ -60,7 +60,7 @@ class SessionUpdateRequest extends FormRequest
     public function all($keys = null) 
     {
         $data = parent::all($keys);
-        $data['id'] = (int)$this->route('Session');
+        $data['id'] = (int)$this->route('session');
         $data['user_id'] = (int)auth()->user()->id;
         $data['episode_id'] = (int)$data['episode_id'];
         return $data;

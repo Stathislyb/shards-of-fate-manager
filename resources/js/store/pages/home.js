@@ -10,6 +10,9 @@ export default {
     state: state,
     mutations: {
         [MUTATION_TYPES.SET_CHAPTERS] (state, payload) {
+            if(!Array.isArray(payload.chapters)){
+                payload.chapters = [];
+            }
             state.chapters = payload.chapters;
         },
     },

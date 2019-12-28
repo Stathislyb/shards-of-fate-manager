@@ -10,3 +10,4 @@
 
 //pages
 exports.home = require("./store/pages/home.js").default;
+exports.focus = require("./store/pages/focus.js").default;

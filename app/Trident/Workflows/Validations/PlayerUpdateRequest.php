@@ -56,7 +56,7 @@ class PlayerUpdateRequest extends FormRequest
     public function all($keys = null) 
     {
         $data = parent::all($keys);
-        $data['id'] = (int)$this->route('Player');
+        $data['id'] = (int)$this->route('player');
         $data['reputation'] = (int)$data['reputation'];
         return $data;
     }

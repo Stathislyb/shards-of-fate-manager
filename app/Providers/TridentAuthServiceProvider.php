@@ -16,6 +16,8 @@ class TridentAuthServiceProvider extends ServiceProvider
         'App\Trident\Workflows\Repositories\ChapterRepository' => 'App\Policies\Trident\ChapterPolicy',
         'App\Trident\Workflows\Repositories\CharacterRepository' => 'App\Policies\Trident\CharacterPolicy',
         'App\Trident\Workflows\Repositories\EpisodeRepository' => 'App\Policies\Trident\EpisodePolicy',
+        'App\Trident\Workflows\Repositories\FocusRepository' => 'App\Policies\Trident\FocusPolicy',
+        'App\Trident\Workflows\Repositories\FocusgoalRepository' => 'App\Policies\Trident\FocusgoalPolicy',
         'App\Trident\Workflows\Repositories\NpcRepository' => 'App\Policies\Trident\NpcPolicy',
         'App\Trident\Workflows\Repositories\PlayerRepository' => 'App\Policies\Trident\PlayerPolicy',
         'App\Trident\Workflows\Repositories\SessionRepository' => 'App\Policies\Trident\SessionPolicy',

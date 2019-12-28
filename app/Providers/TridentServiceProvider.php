@@ -53,6 +53,24 @@ class TridentServiceProvider extends ServiceProvider
         \App::bind('App\Trident\Interfaces\Workflows\Repositories\EpisodeRepositoryInterface',function($app){
             return new \App\Trident\Workflows\Repositories\EpisodeRepository($app);
         });
+        \App::bind('App\Trident\Interfaces\Workflows\Logic\FocusInterface',function($app){
+            return new \App\Trident\Workflows\Logic\Focus(
+                new \App\Trident\Business\Logic\Focus, 
+                new \App\Trident\Workflows\Repositories\FocusRepository($app)
+            );
+        });
+        \App::bind('App\Trident\Interfaces\Workflows\Repositories\FocusRepositoryInterface',function($app){
+            return new \App\Trident\Workflows\Repositories\FocusRepository($app);
+        });
+        \App::bind('App\Trident\Interfaces\Workflows\Logic\FocusGoalInterface',function($app){
+            return new \App\Trident\Workflows\Logic\FocusGoal(
+                new \App\Trident\Business\Logic\FocusGoal, 
+                new \App\Trident\Workflows\Repositories\FocusGoalRepository($app)
+            );
+        });
+        \App::bind('App\Trident\Interfaces\Workflows\Repositories\FocusGoalRepositoryInterface',function($app){
+            return new \App\Trident\Workflows\Repositories\FocusGoalRepository($app);
+        });
         \App::bind('App\Trident\Interfaces\Workflows\Logic\NpcInterface',function($app){
             return new \App\Trident\Workflows\Logic\Npc(
                 new \App\Trident\Business\Logic\Npc, 
@@ -88,6 +106,12 @@ class TridentServiceProvider extends ServiceProvider
         });
         \App::bind('App\Trident\Interfaces\Business\Logic\EpisodeInterface',function($app){
             return new \App\Trident\Business\Logic\Episode($app);
+        });
+        \App::bind('App\Trident\Interfaces\Business\Logic\FocusInterface',function($app){
+            return new \App\Trident\Business\Logic\Focus($app);
+        });
+        \App::bind('App\Trident\Interfaces\Business\Logic\FocusGoalInterface',function($app){
+            return new \App\Trident\Business\Logic\FocusGoal($app);
         });
         \App::bind('App\Trident\Interfaces\Business\Logic\NpcInterface',function($app){
             return new \App\Trident\Business\Logic\Npc($app);

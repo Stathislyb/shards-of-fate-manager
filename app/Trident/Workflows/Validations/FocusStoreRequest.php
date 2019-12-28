@@ -5,7 +5,7 @@ namespace App\Trident\Workflows\Validations;
 use Illuminate\Foundation\Http\FormRequest;
 use Route;
 
-class EpisodeUpdateRequest extends FormRequest
+class FocusStoreRequest extends FormRequest
 {
 
     /**
@@ -26,10 +26,7 @@ class EpisodeUpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'id' => 'integer',
-            'chapter_id' => 'integer',
-            'name' => 'string',
-            'description' => 'string',
+            //
         ];
     }
 
@@ -41,10 +38,7 @@ class EpisodeUpdateRequest extends FormRequest
     public function messages()
     {
         return [
-            'id' => 'T::string()',
-            'chapter_id' => 'T::string()',
-            'name' => 'T::string()',
-            'description' => 'T::string()',
+            //
         ];
     }
 
@@ -56,8 +50,8 @@ class EpisodeUpdateRequest extends FormRequest
     public function all($keys = null) 
     {
         $data = parent::all($keys);
-        $data['id'] = (int)$this->route('episode');
-        $data['chapter_id'] = (int)$data['chapter_id'];
+        $data['id'] = (int)$this->route('focus');
+        $data['user_id'] = (int)auth()->user()->id;
         return $data;
     }
 

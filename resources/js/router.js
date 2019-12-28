@@ -8,5 +8,11 @@ const routers = [
         name: '/',
         component: routes.home,
     },
+    {
+        path: process.env.MIX_BASE_RELATIVE_URL_BACKEND+'/focus',
+        title: 'focus',
+        name: '/focus',
+        component: routes.focus,
+    },
 ];
 export default routers;

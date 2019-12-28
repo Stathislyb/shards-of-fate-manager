@@ -58,7 +58,7 @@ class NpcUpdateRequest extends FormRequest
     public function all($keys = null) 
     {
         $data = parent::all($keys);
-        $data['id'] = (int)$this->route('Npc');
+        $data['id'] = (int)$this->route('npc');
         return $data;
     }
 
