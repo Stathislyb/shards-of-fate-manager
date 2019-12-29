@@ -18,6 +18,7 @@ class CreateFocusTable extends Migration
             $table->bigInteger('chapter_id')->unsigned();
             $table->string('name');
             $table->text('description')->nullable();
+            $table->integer('spend_weeks')->default(0);
             $table->timestamps();
         });
     }

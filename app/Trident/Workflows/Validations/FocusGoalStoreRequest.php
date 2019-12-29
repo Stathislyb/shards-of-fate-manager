@@ -50,8 +50,6 @@ class FocusGoalStoreRequest extends FormRequest
     public function all($keys = null) 
     {
         $data = parent::all($keys);
-        $data['id'] = (int)$this->route('focusGoal');
-        $data['user_id'] = (int)auth()->user()->id;
         return $data;
     }
 

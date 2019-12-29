@@ -8,6 +8,11 @@ use Illuminate\Container\Container as App;
 use App\Trident\Interfaces\Workflows\Logic\FocusGoalInterface as FocusGoalWorkflow;
 use App\Trident\Interfaces\Workflows\Repositories\FocusGoalRepositoryInterface as FocusGoalRepository;
 use App\Trident\Workflows\Exceptions\FocusGoalException;
+use App\Trident\Workflows\Validations\FocusGoalStoreRequest;
+use App\Trident\Workflows\Validations\FocusGoalUpdateRequest;
+use App\Trident\Workflows\Schemas\Logic\FocusGoal\Typed\StructIndexFocusGoal;
+use App\Trident\Workflows\Schemas\Logic\FocusGoal\Typed\StructStoreFocusGoal;
+use App\Trident\Workflows\Schemas\Logic\FocusGoal\Typed\StructUpdateFocusGoal;
 
 class FocusGoalController extends Controller
 {
@@ -16,10 +21,10 @@ class FocusGoalController extends Controller
      */
     protected $focusGoal;
 
-    public function __construct(FocusGoalWorkflow $focusGoal_workflow, FocusGoalRepository $focusGoal_repository)
+    public function __construct(FocusGoalWorkflow $focusGoal_workflow, FocusGoalRepository $focus_goal_repository)
     {
         $this->focusGoal_workflow = $focusGoal_workflow;
-        $this->focusGoal_repository = $focusGoal_repository;
+        $this->focus_goal_repository = $focus_goal_repository;
     }
 
 
@@ -35,18 +40,7 @@ class FocusGoalController extends Controller
     public function index()
     {
         $this->authorize('list',FocusGoalRepository::class);
-        return $this->focusGoal_repository->all();
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {   
-        $this->authorize('create',FocusGoalRepository::class);
-        return view('focusGoal_create');  //ayto DEN tha to exw sto restful_crud code generation
+        return $this->focus_goal_repository->all();
     }
 
     /**
@@ -55,12 +49,12 @@ class FocusGoalController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(FocusGoalStoreRequest $request)
     {
-        $data = $request->all();
-		$data['user_id'] = auth()->id();
-
-        return response()->json( $this->focusGoal_repository->create($data) );
+        $this->authorize('create',$this->focus_goal_repository);
+        $structStoreFocusGoal = new StructStoreFocusGoal( $request->all() );
+        $focusGoalResource = $this->focusGoal_workflow->store($structStoreFocusGoal);
+        return response()->json( $focusGoalResource );
     }
 
     /**
@@ -71,21 +65,8 @@ class FocusGoalController extends Controller
      */
     public function show($id)
     {
-        $this->authorize('view', [$this->focusGoal_repository, $id]);
-        return response()->json( $this->focusGoal_repository->find($id) );
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        $this->authorize('update', [$this->focusGoal_repository, $id]);
-        $focusGoal = $this->focusGoal_repository->find($id);
-        return view('focusGoal_edit', compact('focusGoal'));    //ayto DEN tha to exw sto restful_crud code generation
+        $this->authorize('view', [$this->focus_goal_repository, $id]);
+        return response()->json( $this->focus_goal_repository->find($id) );
     }
 
     /**
@@ -95,10 +76,12 @@ class FocusGoalController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(FocusGoalUpdateRequest $request, $id)
     {   
-        $this->authorize('update', [$this->focusGoal_repository, $id]);
-        return response()->json( $this->focusGoal_repository->find($id)->update($request->all()) );
+        $this->authorize('update', [$this->focus_goal_repository, $id]);
+        $structUpdateFocusGoal = new StructUpdateFocusGoal($request->all());        
+        $focusGoalResource = $this->focusGoal_workflow->update($structUpdateFocusGoal);
+        return response()->json( $focusGoalResource );
     }
 
     /**
@@ -109,8 +92,8 @@ class FocusGoalController extends Controller
      */
     public function destroy($id)
     {
-        $this->authorize('delete', [$this->focusGoal_repository, $id]);
-        return response()->json( $this->focusGoal_repository->destroy($id) );
+        $this->authorize('delete', [$this->focus_goal_repository, $id]);
+        return response()->json( $this->focus_goal_repository->destroy($id) );
     }
 
     //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=

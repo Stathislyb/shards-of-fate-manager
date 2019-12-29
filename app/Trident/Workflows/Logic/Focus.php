@@ -54,7 +54,13 @@ class Focus implements FocusInterface
     {
         $data = $structIndexFocus->getFilledValues();
         
-        $focus = $this->focus_repository->with(['focusGoals'])->get();
+        $focus = $this->focus_repository
+        ->with([
+            'focusGoals' => function($query) {
+                $query->orderBy('goal_weeks', 'ASC');
+            }
+        ])
+        ->get();
         return new FocusResourceCollection($focus);
         
     }
@@ -119,13 +125,23 @@ class Focus implements FocusInterface
     {   
         $id = $structUpdateFocus['id'];
         $data = $structUpdateFocus->getFilledValues();
-        $focus = $this->focus_repository->findOrFail($id);
-
+        if( $structUpdateFocus['spend_weeks'] === 0 ){
+            $data['spend_weeks'] = 0;
+        }
+        
         try {
-            $focus->update($data);
+            $this->focus_repository->findOrFail($id)->update($data);
         } catch (\Exception $e) {
             throw new FocusException('updateFailed');
         }
+
+        $focus = $this->focus_repository
+        ->with([
+            'focusGoals' => function($query) {
+                $query->orderBy('goal_weeks', 'ASC');
+            }
+        ])
+        ->findOrFail($id);
 
         return new FocusResource($focus);
     }

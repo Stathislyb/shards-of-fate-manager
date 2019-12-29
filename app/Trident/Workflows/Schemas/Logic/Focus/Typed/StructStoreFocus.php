@@ -10,8 +10,9 @@ class StructstoreFocus extends StructOptionalValues
     public function __construct($data = [])
     {
         $this->types = [
+            'chapter_id' => T::integer(),
             'name' => T::string(),
-            'description' => T::nullable(T::string()),
+            'description' => T::nullable(T::string()),            
         ];
         
         parent::__construct($this->types);

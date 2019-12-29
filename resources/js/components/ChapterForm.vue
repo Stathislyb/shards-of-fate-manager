@@ -2,10 +2,10 @@
     <div class="chapter_create">
         <Form ref="formValidate" :model="formValidate" :rules="ruleValidate" :label-width="150">
             
-            <FormItem label="name" prop="name">
+            <FormItem label="Name" prop="name">
                 <Input v-model="formValidate.name" placeholder="Enter chapter's name"></Input>
             </FormItem>
-            <FormItem label="description" prop="description">
+            <FormItem label="Description" prop="description">
                 <Input v-model="formValidate.description" placeholder="Enter chapter's description"></Input>
             </FormItem>
             

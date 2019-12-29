@@ -11,7 +11,7 @@ class FocusGoal extends Model
 
     protected $keyType = 'integer';
 
-    protected $fillable = ['focus_id', 'description', 'goal_weeks', 'spend_weeks'];
+    protected $fillable = ['focus_id', 'name', 'description', 'goal_weeks'];
 
     public function focus()
     {

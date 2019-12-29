@@ -8,6 +8,8 @@ use Illuminate\Container\Container as App;
 use App\Trident\Interfaces\Workflows\Logic\FocusInterface as FocusWorkflow;
 use App\Trident\Interfaces\Workflows\Repositories\FocusRepositoryInterface as FocusRepository;
 use App\Trident\Workflows\Exceptions\FocusException;
+use App\Trident\Workflows\Validations\FocusStoreRequest;
+use App\Trident\Workflows\Validations\FocusUpdateRequest;
 use App\Trident\Workflows\Schemas\Logic\Focus\Typed\StructIndexFocus;
 use App\Trident\Workflows\Schemas\Logic\Focus\Typed\StructStoreFocus;
 use App\Trident\Workflows\Schemas\Logic\Focus\Typed\StructUpdateFocus;

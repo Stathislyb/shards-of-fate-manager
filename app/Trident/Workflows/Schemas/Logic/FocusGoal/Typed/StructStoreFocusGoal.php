@@ -11,9 +11,9 @@ class StructstoreFocusGoal extends StructOptionalValues
     {
         $this->types = [
             'focus_id' => T::integer(),
+            'name' => T::string(),
             'description' => T::nullable(T::string()),
             'goal_weeks' => T::integer(),
-            'spend_weeks' => T::integer(),
         ];
         
         parent::__construct($this->types);

@@ -13,6 +13,7 @@ class StructupdateFocus extends StructOptionalValues
             'id' => T::integer(),
             'name' => T::nullable(T::string()),
             'description' => T::nullable(T::string()),
+            'spend_weeks' => T::nullable(T::integer()),
         ];
         
         parent::__construct($this->types);

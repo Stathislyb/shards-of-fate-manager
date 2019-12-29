@@ -119,13 +119,14 @@ class FocusGoal implements FocusGoalInterface
     {   
         $id = $structUpdateFocusGoal['id'];
         $data = $structUpdateFocusGoal->getFilledValues();
-        $focusGoal = $this->focusGoal_repository->findOrFail($id);
-
+        
         try {
-            $focusGoal->update($data);
+            $this->focusGoal_repository->findOrFail($id)->update($data);
         } catch (\Exception $e) {
             throw new FocusGoalException('updateFailed');
         }
+
+        $focusGoal = $this->focusGoal_repository->findOrFail($id);
 
         return new FocusGoalResource($focusGoal);
     }

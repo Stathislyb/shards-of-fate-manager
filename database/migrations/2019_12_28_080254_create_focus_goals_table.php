@@ -16,9 +16,9 @@ class CreateFocusGoalsTable extends Migration
         Schema::create('focus_goals', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('focus_id')->unsigned();
+            $table->string('name');
             $table->text('description')->nullable();
             $table->integer('goal_weeks')->default(0);
-            $table->integer('spend_weeks')->default(0);
             $table->timestamps();
         });
     }

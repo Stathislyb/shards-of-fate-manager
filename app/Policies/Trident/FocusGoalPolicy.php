@@ -23,7 +23,7 @@ class FocusGoalPolicy
      */
     public function list(User $user)
     {
-        return \Auth::check();
+        return true;
     }
 
     /**
@@ -35,7 +35,7 @@ class FocusGoalPolicy
      */
     public function view(User $user, FocusGoal $FocusGoal, int $id)
     {
-        return $user->id == $FocusGoal->findOrFail($id)->user_id;
+        return true;
     }
 
     /**
@@ -46,7 +46,7 @@ class FocusGoalPolicy
      */
     public function create(User $user)
     {
-        return \Auth::check();
+        return true;
     }
 
     /**
@@ -58,7 +58,7 @@ class FocusGoalPolicy
      */
     public function update(User $user, FocusGoal $FocusGoal, int $id)
     {
-        return $user->id == $FocusGoal->findOrFail($id)->user_id;
+        return true;
     }
 
     /**
@@ -70,7 +70,7 @@ class FocusGoalPolicy
      */
     public function delete(User $user, FocusGoal $FocusGoal, int $id)
     {
-        return $user->id == $FocusGoal->findOrFail($id)->user_id;
+        return true;
     }
 
     /**
@@ -82,7 +82,7 @@ class FocusGoalPolicy
      */
     public function restore(User $user, FocusGoal $FocusGoal, int $id)
     {
-        return $user->id == $FocusGoal->findOrFail($id)->user_id;
+        return true;
     }
 
     /**
@@ -94,6 +94,6 @@ class FocusGoalPolicy
      */
     public function forceDelete(User $user, FocusGoal $FocusGoal, int $id)
     {
-        return $user->id == $FocusGoal->findOrFail($id)->user_id;
+        return true;
     }
 }

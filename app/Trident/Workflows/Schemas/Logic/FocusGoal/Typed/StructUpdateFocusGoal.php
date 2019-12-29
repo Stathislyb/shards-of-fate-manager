@@ -12,9 +12,9 @@ class StructupdateFocusGoal extends StructOptionalValues
         $this->types = [
             'id' => T::integer(),
             'focus_id' => T::nullable(T::integer()),
+            'name' => T::nullable(T::string()),
             'description' => T::nullable(T::string()),
             'goal_weeks' => T::nullable(T::integer()),
-            'spend_weeks' => T::nullable(T::integer()),
         ];
         
         parent::__construct($this->types);

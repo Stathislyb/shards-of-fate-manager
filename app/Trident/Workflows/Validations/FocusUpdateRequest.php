@@ -51,7 +51,6 @@ class FocusUpdateRequest extends FormRequest
     {
         $data = parent::all($keys);
         $data['id'] = (int)$this->route('focus');
-        $data['user_id'] = (int)auth()->user()->id;
         return $data;
     }
 

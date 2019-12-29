@@ -50,8 +50,6 @@ class FocusStoreRequest extends FormRequest
     public function all($keys = null) 
     {
         $data = parent::all($keys);
-        $data['id'] = (int)$this->route('focus');
-        $data['user_id'] = (int)auth()->user()->id;
         return $data;
     }
 
