@@ -4,6 +4,8 @@ const MUTATION_TYPES = {
     SET_CHAPTERS: 'SET_CHAPTERS',
 
     SET_FOCUS: 'SET_FOCUS',
+
+    SET_PLAYERS: 'SET_PLAYERS',
 };
 
 export default MUTATION_TYPES;

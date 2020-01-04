@@ -54,7 +54,7 @@ class Player implements PlayerInterface
     {
         $data = $structIndexPlayer->getFilledValues();
         
-        $players = $this->player_repository->get();
+        $players = $this->player_repository->with(['reputationItems'])->get();
         return new PlayerResourceCollection($players);
         
     }
@@ -81,7 +81,8 @@ class Player implements PlayerInterface
     {        
         $data = $structStorePlayer->getFilledValues();
         $new_player = $this->player_repository->create($data);
-
+        $new_player->load(['reputationItems']);
+        
         return new PlayerResource($new_player);
         
     }
@@ -126,6 +127,8 @@ class Player implements PlayerInterface
         } catch (\Exception $e) {
             throw new PlayerException('updateFailed');
         }
+
+        $player->load(['reputationItems']);
 
         return new PlayerResource($player);
     }

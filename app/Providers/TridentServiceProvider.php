@@ -89,6 +89,15 @@ class TridentServiceProvider extends ServiceProvider
         \App::bind('App\Trident\Interfaces\Workflows\Repositories\PlayerRepositoryInterface',function($app){
             return new \App\Trident\Workflows\Repositories\PlayerRepository($app);
         });
+        \App::bind('App\Trident\Interfaces\Workflows\Logic\ReputationItemInterface',function($app){
+            return new \App\Trident\Workflows\Logic\ReputationItem(
+                new \App\Trident\Business\Logic\ReputationItem, 
+                new \App\Trident\Workflows\Repositories\ReputationItemRepository($app)
+            );
+        });
+        \App::bind('App\Trident\Interfaces\Workflows\Repositories\ReputationItemRepositoryInterface',function($app){
+            return new \App\Trident\Workflows\Repositories\ReputationItemRepository($app);
+        });
         \App::bind('App\Trident\Interfaces\Workflows\Logic\SessionInterface',function($app){
             return new \App\Trident\Workflows\Logic\Session(
                 new \App\Trident\Business\Logic\Session, 
@@ -118,6 +127,9 @@ class TridentServiceProvider extends ServiceProvider
         });
         \App::bind('App\Trident\Interfaces\Business\Logic\PlayerInterface',function($app){
             return new \App\Trident\Business\Logic\Player($app);
+        });
+        \App::bind('App\Trident\Interfaces\Business\Logic\ReputationItemInterface',function($app){
+            return new \App\Trident\Business\Logic\ReputationItem($app);
         });
         \App::bind('App\Trident\Interfaces\Business\Logic\SessionInterface',function($app){
             return new \App\Trident\Business\Logic\Session($app);

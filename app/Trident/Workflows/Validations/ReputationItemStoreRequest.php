@@ -5,7 +5,7 @@ namespace App\Trident\Workflows\Validations;
 use Illuminate\Foundation\Http\FormRequest;
 use Route;
 
-class PlayerStoreRequest extends FormRequest
+class ReputationItemStoreRequest extends FormRequest
 {
 
     /**
@@ -26,9 +26,7 @@ class PlayerStoreRequest extends FormRequest
     public function rules()
     {
         return [
-        //     'name' => 'string|required',
-        //     'reputation' => 'integer',
-        //     'notes' => 'string',
+            //
         ];
     }
 
@@ -40,9 +38,7 @@ class PlayerStoreRequest extends FormRequest
     public function messages()
     {
         return [
-        //     'name' => 'T::string()',
-        //     'reputation' => 'T::string()',
-        //     'notes' => 'T::string()',
+            //
         ];
     }
 
@@ -54,7 +50,6 @@ class PlayerStoreRequest extends FormRequest
     public function all($keys = null) 
     {
         $data = parent::all($keys);
-        $data['reputation'] = (int)$data['reputation'];
         return $data;
     }
 

@@ -27,6 +27,7 @@ const store = new Vuex.Store({
             modules: {
                 Home: stores.home,
                 Focus: stores.focus,
+                Players: stores.players,
             }
         },
     },

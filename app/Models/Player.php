@@ -41,4 +41,9 @@ class Player extends Model
     {
         return $this->hasMany('App\Models\Character');
     }
+
+    public function reputationItems()
+    {
+        return $this->hasMany('App\Models\ReputationItem');
+    }
 }

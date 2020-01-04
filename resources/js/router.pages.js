@@ -11,3 +11,4 @@
 //pages
 exports.home = require("./pages/home.vue").default;
 exports.focus = require("./pages/focus.vue").default;
+exports.players = require("./pages/players.vue").default;

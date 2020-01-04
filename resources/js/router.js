@@ -14,5 +14,11 @@ const routers = [
         name: '/focus',
         component: routes.focus,
     },
+    {
+        path: process.env.MIX_BASE_RELATIVE_URL_BACKEND+'/players',
+        title: 'players',
+        name: '/players',
+        component: routes.players,
+    },
 ];
 export default routers;

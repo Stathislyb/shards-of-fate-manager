@@ -26,10 +26,10 @@ class PlayerUpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'id' => 'integer',
-            'name' => 'string',
-            'reputation' => 'integer',
-            'notes' => 'string',
+        //     'id' => 'integer',
+        //     'name' => 'string',
+        //     'reputation' => 'integer',
+        //     'notes' => 'string',
         ];
     }
 
@@ -41,10 +41,10 @@ class PlayerUpdateRequest extends FormRequest
     public function messages()
     {
         return [
-            'id' => 'T::string()',
-            'name' => 'T::string()',
-            'reputation' => 'T::string()',
-            'notes' => 'T::string()',
+        //     'id' => 'T::string()',
+        //     'name' => 'T::string()',
+        //     'reputation' => 'T::string()',
+        //     'notes' => 'T::string()',
         ];
     }
 

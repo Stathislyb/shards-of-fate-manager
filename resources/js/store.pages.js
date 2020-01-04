@@ -11,3 +11,4 @@
 //pages
 exports.home = require("./store/pages/home.js").default;
 exports.focus = require("./store/pages/focus.js").default;
+exports.players = require("./store/pages/players.js").default;

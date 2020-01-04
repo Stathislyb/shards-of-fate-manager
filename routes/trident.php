@@ -18,5 +18,6 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/trident/resource/focusgoal', 'FocusgoalController');
     Route::resource('/trident/resource/npc', 'NpcController');
     Route::resource('/trident/resource/player', 'PlayerController');
+    Route::resource('/trident/resource/reputationItem', 'ReputationItemController');
     Route::resource('/trident/resource/session', 'SessionController');
 });
