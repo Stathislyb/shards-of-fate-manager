@@ -9,7 +9,7 @@
 // //^^^
 
 //pages
-exports.index = require("./pages/Index.vue").default;
+exports.index = require("./pages/index.vue").default;
 
 exports.chapter_list_delete = require("./pages/chapter_list_delete.vue").default;
 exports.chapter_create = require("./pages/chapter_create.vue").default;

@@ -3494,6 +3494,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
 var namespace = 'pages/Players';
 /* harmony default export */ __webpack_exports__["default"] = ({
   namespace: namespace,
@@ -87555,7 +87556,11 @@ var render = function() {
             { attrs: { label: "Description", prop: "description" } },
             [
               _c("Input", {
-                attrs: { placeholder: "Enter chapter's description" },
+                attrs: {
+                  placeholder: "Enter chapter's description",
+                  type: "textarea",
+                  autosize: true
+                },
                 model: {
                   value: _vm.formValidate.description,
                   callback: function($$v) {
@@ -87710,7 +87715,11 @@ var render = function() {
             { attrs: { label: "Description", prop: "description" } },
             [
               _c("Input", {
-                attrs: { placeholder: "Enter focus's description" },
+                attrs: {
+                  placeholder: "Enter focus's description",
+                  type: "textarea",
+                  autosize: true
+                },
                 model: {
                   value: _vm.formValidate.description,
                   callback: function($$v) {
@@ -87808,7 +87817,11 @@ var render = function() {
             { attrs: { label: "Description", prop: "description" } },
             [
               _c("Input", {
-                attrs: { placeholder: "Enter focus goal's description/reward" },
+                attrs: {
+                  placeholder: "Enter focus goal's description/reward",
+                  type: "textarea",
+                  autosize: true
+                },
                 model: {
                   value: _vm.formValidate.description,
                   callback: function($$v) {
@@ -88146,7 +88159,11 @@ var render = function() {
             { attrs: { label: "Notes", prop: "notes" } },
             [
               _c("Input", {
-                attrs: { placeholder: "Enter player's notes" },
+                attrs: {
+                  placeholder: "Enter player's notes",
+                  type: "textarea",
+                  autosize: true
+                },
                 model: {
                   value: _vm.formValidate.notes,
                   callback: function($$v) {
@@ -88255,13 +88272,7 @@ var render = function() {
                           _c(
                             "p",
                             { attrs: { slot: "content" }, slot: "content" },
-                            [
-                              _vm._v(
-                                "\n                            " +
-                                  _vm._s(player.notes) +
-                                  "\n                        "
-                              )
-                            ]
+                            [_c("pre", [_vm._v(_vm._s(player.notes))])]
                           )
                         ])
                       ],
@@ -88324,7 +88335,7 @@ var render = function() {
                                           [
                                             _c(
                                               "Col",
-                                              { attrs: { span: "6" } },
+                                              { attrs: { span: "24" } },
                                               [
                                                 _c("Button", {
                                                   staticClass:
@@ -88468,7 +88479,11 @@ var render = function() {
             { attrs: { label: "Description", prop: "description" } },
             [
               _c("Input", {
-                attrs: { placeholder: "Enter item's description" },
+                attrs: {
+                  placeholder: "Enter item's description",
+                  type: "textarea",
+                  autosize: true
+                },
                 model: {
                   value: _vm.formValidate.description,
                   callback: function($$v) {
@@ -88774,7 +88789,7 @@ var render = function() {
               _c(
                 "Modal",
                 {
-                  attrs: { title: "Player", "footer-hide": "" },
+                  attrs: { title: "Player", width: "50", "footer-hide": "" },
                   model: {
                     value: _vm.player_modal,
                     callback: function($$v) {

@@ -5,7 +5,7 @@
                 <Input v-model="formValidate.name" placeholder="Enter focus's name"></Input>
             </FormItem>
             <FormItem label="Description" prop="description">
-                <Input v-model="formValidate.description" placeholder="Enter focus's description"></Input>
+                <Input v-model="formValidate.description" placeholder="Enter focus's description" type="textarea" :autosize="true"></Input>
             </FormItem>
             
             <FormItem>

@@ -9,7 +9,7 @@
                 <Input v-model="formValidate.reputation" placeholder="Enter player's reputation" number></Input>
             </FormItem>
             <FormItem label="Notes" prop="notes">
-                <Input v-model="formValidate.notes" placeholder="Enter player's notes"></Input>
+                <Input v-model="formValidate.notes" placeholder="Enter player's notes" type="textarea" :autosize="true"></Input>
             </FormItem>
             
             <FormItem>

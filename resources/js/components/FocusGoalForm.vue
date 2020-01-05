@@ -5,7 +5,7 @@
                 <Input v-model="formValidate.name" placeholder="Enter focus goal's name"></Input>
             </FormItem>
             <FormItem label="Description" prop="description">
-                <Input v-model="formValidate.description" placeholder="Enter focus goal's description/reward"></Input>
+                <Input v-model="formValidate.description" placeholder="Enter focus goal's description/reward" type="textarea" :autosize="true"></Input>
             </FormItem>
             <FormItem label="Goal weeks" prop="goal_weeks">
                 <Input v-model="formValidate.goal_weeks" placeholder="Enter focus goal's weeks to be complete" number></Input>

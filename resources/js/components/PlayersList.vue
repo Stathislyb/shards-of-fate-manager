@@ -11,7 +11,7 @@
                         <Panel name="player_notes">
                             Player Notes
                             <p slot="content">
-                                {{player.notes}}
+                                <pre>{{player.notes}}</pre>
                             </p>
                         </Panel>
                     </Collapse> 
@@ -25,7 +25,7 @@
                                 <List item-layout="vertical">
                                     <ListItem v-for="reputation_item in player.reputation_items" :key="reputation_item.id" >
                                         <Row>
-                                            <Col span="6">                        
+                                            <Col span="24">                        
                                                 <Button type="text" class="inline-edit-btn" @click="triggerEditReputationItem(reputation_item)" icon="ios-create-outline" />
                                                 {{reputation_item.name}} (cost: {{reputation_item.reputation_cost}} Reputation)                       
                                             </Col>

@@ -6,7 +6,7 @@
                 <Input v-model="formValidate.name" placeholder="Enter chapter's name"></Input>
             </FormItem>
             <FormItem label="Description" prop="description">
-                <Input v-model="formValidate.description" placeholder="Enter chapter's description"></Input>
+                <Input v-model="formValidate.description" placeholder="Enter chapter's description" type="textarea" :autosize="true"></Input>
             </FormItem>
             
             <FormItem>

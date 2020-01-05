@@ -20,6 +20,7 @@
                 <Modal
                     title="Player"
                     v-model="player_modal"
+                    width="50"
                     footer-hide
                 >
                     <player-form

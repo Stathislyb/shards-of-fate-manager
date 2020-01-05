@@ -5,7 +5,7 @@
                 <Input v-model="formValidate.name" placeholder="Enter item's name"></Input>
             </FormItem>
             <FormItem label="Description" prop="description">
-                <Input v-model="formValidate.description" placeholder="Enter item's description"></Input>
+                <Input v-model="formValidate.description" placeholder="Enter item's description" type="textarea" :autosize="true"></Input>
             </FormItem>
             <FormItem label="Reputation cost" prop="reputation_cost">
                 <Input v-model="formValidate.reputation_cost" placeholder="Enter item's reputation cost" number></Input>
