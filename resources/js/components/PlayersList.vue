@@ -2,7 +2,7 @@
     <List item-layout="vertical">
         <ListItem v-for="player in this.players" :key="player.id" >
             <Row>
-                <Col span="24">
+                <Col span="24" class="player-name-row">
                     <Button type="text" class="inline-edit-btn" @click="triggerEditPlayer(player)" icon="ios-create-outline" /> 
                     {{player.name}}
                 </Col>
@@ -11,7 +11,7 @@
                         <Panel name="player_notes">
                             Player Notes
                             <p slot="content">
-                                <pre>{{player.notes}}</pre>
+                                <pre style="white-space: pre-line;">{{player.notes}}</pre>
                             </p>
                         </Panel>
                     </Collapse> 

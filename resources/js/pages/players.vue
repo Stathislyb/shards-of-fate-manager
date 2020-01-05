@@ -1,6 +1,10 @@
-<style scoped>
+<style>
     .index {
         margin-top: 40px;
+    }
+    .player-name-row{
+        background-color: #f7f7f7;
+        border: 1px solid #eaeaea;
     }
 </style>
 
